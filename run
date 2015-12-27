@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Compiles and runs executable. Only *NIX is supported and termbox is required.
+
+NAME=$(echo "$1" | cut -d'.' -f1)
+
+gcc $1 -lm -ltermbox -o $NAME && ./$NAME
